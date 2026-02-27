@@ -6,5 +6,23 @@
     "ghcr.io/devcontainers/features/azure-cli:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/python:1": {}
-  }
+  },
+  "customizations": {
+	"vscode": {
+		"extensions": [
+			"GitHub.copilot",
+			"GitHub.copilot-chat",
+            "ms-azuretools.vscode-azure-github-copilot",
+			"alexcvzz.vscode-sqlite",
+			"astro-build.astro-vscode",
+			"svelte.svelte-vscode",
+			"ms-python.python",
+			"ms-python.vscode-pylance"
+		]
+	}
+},"forwardPorts": [
+	4321,
+	5100,
+	5000
+],"postStartCommand": "chmod +x /workspaces/dog-shelter/scripts/start-app.sh && /workspaces/dog-shelter/scripts/start-app.sh",
 }
